@@ -10,8 +10,6 @@ let date = document.getElementById('date')
 let description = document.getElementById('description')
 
 
-
-
 let todo = document.getElementById('to-do-tasks')
 let Progress = document.getElementById('in-progress-tasks')
 let done = document.getElementById('done-tasks')
@@ -166,6 +164,7 @@ function saveTask() {
 function editTask(id) {
 
     console.log(id);
+
     tasks.forEach(taskele => {
 
         if (taskele.id == id) {
@@ -231,7 +230,6 @@ function deleteTask(id) {
             tasks.splice(i, 1);
         }
     }
-
     // close modal form
 
     // refresh tasks
@@ -246,7 +244,7 @@ function vider(){
     description.value = ""
 
     btnSave.innerHTML='save'
-    btnSave.setAttribute("onclick",`AjouterTask()`)  
+    btnSave.setAttribute("onclick",`saveTask()`)  
 
 }
 
